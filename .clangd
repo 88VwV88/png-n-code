@@ -1,2 +1,2 @@
 CompileFlags:
-    Add: [-g, -pedantic, -xc]
+    Add: [-g, -pedantic]
