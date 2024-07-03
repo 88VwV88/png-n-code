@@ -1,2 +1,3 @@
 CompileFlags:
-    Add: [-g, -pedantic]
+    Add: [-g, -pedantic, -W, -Wall]
+    Remove: [-Wempty-translation-unit]

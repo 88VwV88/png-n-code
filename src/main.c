@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include "PNGdCoder.h"
 
 int main(void) {
-  printf("Hello, World!\n");
+  printf("%lld\n", sizeof(Chunk_t));
 
   return 0;
 }
