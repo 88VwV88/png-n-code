@@ -4,10 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define OK 0;
-#define INVALID_BUFFER 1;
-#define UNKNOWN_CHUNK 2;
-
 typedef unsigned char u8;
 typedef enum ChunkType {
   /**
@@ -49,7 +45,7 @@ typedef struct ChunkData {
  * @return an array of `ChunkData` with the various chunks,
    in the parsed contents or NULL if an error occurred.
  */
-ChunkData_t **read_png_data(const char *__buffer);
+ChunkData_t **read_png_data(char *__filename);
 /**
  * read the png data from file `filename`,
  * or file handle `fileptr` if `filename` is `NULL.
@@ -66,6 +62,6 @@ ChunkData_t **read_png_file_data(const char *__filename, FILE *__fileptr);
  * @param `chunk` the `ChunkData_t` to return the data in.
  * @return the error code if any.
  */
-int parse_chunk(char *__buffer, ChunkData_t *__chunk);
+int parse_chunk(u8 *__buffer, ChunkData_t *__chunk);
 
 #endif

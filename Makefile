@@ -6,7 +6,7 @@ OBJS := $(patsubst src/%.c, out/%.o, $(SRC))
 BIN := encode
 
 BUILD ?= DEBUG
-DEBUG := -g -predantic -O0
+DEBUG := -g -predantic -O0 -fsanitize=address -fsanitize=undefined
 RELEASE := -O2
 
 out/%.o: src/%.c
@@ -18,12 +18,13 @@ all: $(OBJS)
 	@echo [COMPILATION SUCCESS]
 
 release: BUILD = RELEASE
-release: all
+release: clean all
 
 test: all
 	@./encode.exe
 
 clean:
-	rm -f out/*.o $(BIN)
+	rm --force $(BIN).exe
+	rm --force $(OBJS)
 
 .PHONY: all release clean

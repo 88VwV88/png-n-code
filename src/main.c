@@ -1,8 +1,7 @@
-#include <stdio.h>
 #include "PNGdCoder.h"
 
 int main(void) {
-  printf("%lld\n", sizeof(Chunk_t));
+  read_png_data("mandel.png");
 
   return 0;
 }
