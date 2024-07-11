@@ -1,0 +1,3 @@
+D:/code/c-cpp/PNGnCode/build/CMakeFiles/PNGnCode.dir
+D:/code/c-cpp/PNGnCode/build/CMakeFiles/edit_cache.dir
+D:/code/c-cpp/PNGnCode/build/CMakeFiles/rebuild_cache.dir
